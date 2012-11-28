@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Commitment::Application.config.secret_key_base = '7bd36e9f5209dd585430ac786e222c13f5b264196c0ad3301902a58add4e4bbc14a91cf2e9e9f071ef40cc623983dd73628e71ade2ab209baaebcd3d2d879e59'
+Commitment::Application.config.secret_key_base = 'e4fc80728a7b1862ab655f82f41bf4b88f49da47f62788834ab71b9db7a4e69690354ea39b299fe93c506fbd437e3162ae6a7805a9f569282d41fc0a9ce8bd4d'
