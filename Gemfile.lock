@@ -88,6 +88,8 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
+    active_model_serializers (0.6.0)
+      activemodel (>= 3.0)
     builder (3.1.4)
     coffee-script (2.2.0)
       coffee-script-source
@@ -123,6 +125,10 @@ GEM
     rack (1.4.1)
     rack-test (0.6.2)
       rack (>= 1.0)
+    rails-api (0.0.2)
+      actionpack (>= 3.2.0)
+      railties (>= 3.2.0)
+      tzinfo (~> 0.3.31)
     rake (10.0.2)
     rdoc (3.12)
       json (~> 1.4)
@@ -148,6 +154,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_model_serializers
   activerecord-deprecated_finders!
   arel!
   coffee-rails!
@@ -156,6 +163,7 @@ DEPENDENCIES
   jquery-rails
   puma
   rails!
+  rails-api
   sass-rails!
   sprockets-rails!
   turbolinks

@@ -32,8 +32,9 @@ end
 
 # Gems required for API requests
 group :api do
-  # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
   # gem 'jbuilder'
+  gem 'active_model_serializers'
+  gem 'rails-api'
 end
 
 group :runtime do
