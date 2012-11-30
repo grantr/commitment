@@ -2,10 +2,12 @@ source 'https://rubygems.org'
 
 gem 'rails',     github: 'rails/rails'
 gem 'journey',   github: 'rails/journey'
-gem 'arel',      github: 'rails/arel'
-gem 'activerecord-deprecated_finders', github: 'rails/activerecord-deprecated_finders'
 
-
+# ActiveRecord dependencies. Why is activerecord required by rails?
+group :activerecord do
+  gem 'arel',      github: 'rails/arel'
+  gem 'activerecord-deprecated_finders', github: 'rails/activerecord-deprecated_finders'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -20,22 +22,24 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+# Gems required for web pages
+group :html do
+  gem 'jquery-rails'
 
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+  # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+  gem 'turbolinks'
+end
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+# Gems required for API requests
+group :api do
+  # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+  # gem 'jbuilder'
+end
 
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-# gem 'jbuilder'
+group :runtime do
+  gem 'puma'
+end
 
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano', group: :development
-
-# To use debugger
-# gem 'debugger'
+group :development, :test do
+  gem 'debugger'
+end

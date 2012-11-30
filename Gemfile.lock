@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/rails/activerecord-deprecated_finders.git
-  revision: dd99c375c44b7cb38c5323cd419a5882817249f0
+  revision: 2125c7b4f959c1aa025f61bdfb5f95b5d6a52b51
   specs:
     activerecord-deprecated_finders (0.0.1)
 
@@ -26,7 +26,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/rails.git
-  revision: 3e965e2144d515499c3c94de7973cf0bd84649e2
+  revision: 76c432f5868c8f626a2d38b63b46606e5b1323ff
   specs:
     actionmailer (4.0.0.beta)
       actionpack (= 4.0.0.beta)
@@ -93,6 +93,14 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.4.0)
+    columnize (0.3.6)
+    debugger (1.2.2)
+      columnize (>= 0.3.1)
+      debugger-linecache (~> 1.1.1)
+      debugger-ruby_core_source (~> 1.1.5)
+    debugger-linecache (1.1.2)
+      debugger-ruby_core_source (>= 1.1.1)
+    debugger-ruby_core_source (1.1.5)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -110,6 +118,8 @@ GEM
     minitest (4.3.2)
     multi_json (1.3.7)
     polyglot (0.3.3)
+    puma (1.6.3)
+      rack (~> 1.2)
     rack (1.4.1)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -141,8 +151,10 @@ DEPENDENCIES
   activerecord-deprecated_finders!
   arel!
   coffee-rails!
+  debugger
   journey!
   jquery-rails
+  puma
   rails!
   sass-rails!
   sprockets-rails!
