@@ -3,10 +3,24 @@ source 'https://rubygems.org'
 gem 'rails',     github: 'rails/rails'
 gem 'journey',   github: 'rails/journey'
 
-# ActiveRecord dependencies. Why is activerecord required by rails?
-group :activerecord do
-  gem 'arel',      github: 'rails/arel'
-  gem 'activerecord-deprecated_finders', github: 'rails/activerecord-deprecated_finders'
+# Gems required for persistence
+group :persistence do
+  gem 'riak-client'
+end
+
+# Gems required for API requests
+group :api do
+  # gem 'jbuilder'
+  gem 'active_model_serializers'
+  gem 'rails-api'
+end
+
+group :runtime do
+  gem 'puma'
+end
+
+group :development, :test do
+  gem 'debugger'
 end
 
 # Gems used only for assets and not required
@@ -30,17 +44,9 @@ group :html do
   gem 'turbolinks'
 end
 
-# Gems required for API requests
-group :api do
-  # gem 'jbuilder'
-  gem 'active_model_serializers'
-  gem 'rails-api'
+# ActiveRecord dependencies. Why is activerecord required by rails?
+group :activerecord do
+  gem 'arel',      github: 'rails/arel'
+  gem 'activerecord-deprecated_finders', github: 'rails/activerecord-deprecated_finders'
 end
 
-group :runtime do
-  gem 'puma'
-end
-
-group :development, :test do
-  gem 'debugger'
-end
